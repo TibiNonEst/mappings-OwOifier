@@ -213,7 +213,8 @@ public class HashedNameProvider {
             int digit = bigInteger.mod(BigInteger.valueOf(base)).intValue();
             bigInteger = bigInteger.divide(BigInteger.valueOf(base));
 
-            builder.insert(0, (char)('a' + digit));
+            char character = (char)('A' + digit);
+            builder.insert(0, character + "w" + character);
         }
 
         return builder.toString();
